@@ -23,6 +23,7 @@ User Scripts require a browser addon to manage such as Tampermonkey or Greasemon
 
 | Name                                                                                                                   | Description                                         |
 |------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
+| [ASN Plus](https://raw.githubusercontent.com/cssnr/browser-scripts/master/asn/asn.user.js)                             | ASN Plus Modifications                              |
 | [IMDb Title Prev-Next Key](https://raw.githubusercontent.com/cssnr/browser-scripts/master/imdb/imdb-prev-next.user.js) | Navigate episode previous and next with arrow keys. |
 | [IMDb Auto Show All](https://raw.githubusercontent.com/cssnr/browser-scripts/master/imdb/imdb-show-all.user.js)        | Automatically show all titles for actors.           |
 
