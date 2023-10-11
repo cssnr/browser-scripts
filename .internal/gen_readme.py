@@ -20,19 +20,20 @@ def get_data_from_path(path: Union[Path, str]) -> Dict[str, dict]:
             continue
         print(f'processing: dir_path: {dir_path}')
         for filename in os.listdir(dir_path):
-            print(f'processing: filename: {filename}')
-            meta = {}
-            with open(os.path.join(dir_path, filename), 'r') as f:
-                for line in f:
-                    match = re.match('^\s*?\/\/\s*?@(\w+)\s*(.*)', line)
-                    if match:
-                        key = match.group(1)
-                        value = match.group(2)
-                        if key and value:
-                            meta[key.lower()] = value
-                            # print(f'{key} - {value}')
-            meta['dir'] = os.path.basename(dir_path)
-            data[filename] = meta
+            if '.user.js' in filename.lower():
+                print(f'processing: filename: {filename}')
+                meta = {}
+                with open(os.path.join(dir_path, filename), 'r') as f:
+                    for line in f:
+                        match = re.match('^\s*?\/\/\s*?@(\w+)\s*(.*)', line)
+                        if match:
+                            key = match.group(1)
+                            value = match.group(2)
+                            if key and value:
+                                meta[key.lower()] = value
+                                # print(f'{key} - {value}')
+                meta['dir'] = os.path.basename(dir_path)
+                data[filename] = meta
     return data
 
 

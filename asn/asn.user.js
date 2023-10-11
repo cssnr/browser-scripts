@@ -46,7 +46,6 @@ function updateEntryTable() {
     const rows = document.getElementsByTagName('table')[0].children[0].rows
     for (const tr of rows) {
         if (tr.innerHTML.includes('Registration:')) {
-            console.log(tr)
             const reg = tr.cells[1].textContent.trim()
             console.log(`reg: ${reg}`)
             tr.cells[1].innerHTML = `<span>${reg}</span>`
@@ -67,15 +66,22 @@ function updateEntryTable() {
     }
 }
 
-function addEditLink() {
+function updateLastUpdated() {
+    // Add Edit Link
     const el = document.getElementsByClassName('lastupdated')[0]
     const id = document.URL.split('/').at(-1).trim()
-    if (!isNaN(id)) {
-        console.log(`id: ${id}`)
-        el.innerHTML = `<a href='https://aviation-safety.net/wikibase/web_db_edit.php?id=${id}'>Edit ${id}</a>`
-        el.style.float = 'none'
-        el.style.marginLeft = '40px'
+    if (isNaN(id)) {
+        return
     }
+    console.log(`id: ${id}`)
+    el.innerHTML = `<a href='https://aviation-safety.net/wikibase/web_db_edit.php?id=${id}'>Edit ${id}</a>`
+    el.style.float = 'none'
+    el.style.marginLeft = '40px'
+    // Add Updated Date
+    const rows = document.getElementsByClassName('updates')[0].children[0].rows
+    const updated = rows[rows.length - 1].firstChild.innerText.trim()
+    console.log(`updated: ${updated}`)
+    el.innerHTML += ` - Updated: ${updated}`
 }
 
 // Wait for load
@@ -85,7 +91,7 @@ window.addEventListener(
         highlightTableRows()
         if (document.URL.includes('aviation-safety.net/wikibase/')) {
             updateEntryTable()
-            addEditLink()
+            updateLastUpdated()
         }
     },
     false
