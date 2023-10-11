@@ -13,10 +13,10 @@ Random Browser Scripts for Random Sites that do Random Things.
 
 ## Scripts
 
-| Name                                                                                                                  | Description                                         |
-|-----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| [IMDb Title Prev-Next Key](https://raw.githubusercontent.com/cssnr/browser-scripts/masterimdb/imdb-prev-next.user.js) | Navigate episode previous and next with arrow keys. |
-| [IMDb Auto Show All](https://raw.githubusercontent.com/cssnr/browser-scripts/masterimdb/imdb-show-all.user.js)        | Automatically show all titles for actors.           |
+| Name                                                                                                                   | Description                                         |
+|------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
+| [IMDb Title Prev-Next Key](https://raw.githubusercontent.com/cssnr/browser-scripts/master/imdb/imdb-prev-next.user.js) | Navigate episode previous and next with arrow keys. |
+| [IMDb Auto Show All](https://raw.githubusercontent.com/cssnr/browser-scripts/master/imdb/imdb-show-all.user.js)        | Automatically show all titles for actors.           |
 
 
 ---
