@@ -3,6 +3,7 @@
 ## Table of Contents
 
 *   [Overview](#overview)
+*   [Requirements](#requirements)
 *   [Scripts](#scripts)
 
 ## Overview
@@ -10,6 +11,13 @@
 Random Browser Scripts for Random Sites that do Random Things.
 
 **Caveat Emptor**
+
+## Requirements
+
+User Scripts require a browser addon to manage such as Tampermonkey or Greasemonkey.
+
+- [Tampermonkey](https://www.tampermonkey.net/) (All)
+- [Greasemonkey](https://www.greasespot.net/) (Firefox Only)
 
 ## Scripts
 
