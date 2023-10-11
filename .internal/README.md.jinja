@@ -1,0 +1,25 @@
+# Browser Scripts
+
+## Table of Contents
+
+*   [Overview](#overview)
+*   [Scripts](#scripts)
+
+## Overview
+
+Random Browser Scripts for Random Sites that do Random Things.
+
+**Caveat Emptor**
+
+## Scripts
+
+| Name | Description |
+| --- | --- |
+{% for filename, data in all_data.items() -%}
+| [{{ data['name'] }}](https://raw.githubusercontent.com/cssnr/browser-scripts/master{{ data['dir'] }}/{{ filename }}) | {{ data['description'] }} |
+{% endfor %}
+
+---
+[Feature Requests](https://github.com/cssnr/browser-scripts/issues/new?title=Feature%20Request) |
+[Issues](https://github.com/cssnr/browser-scripts/issues/new?title=Issue)
+
