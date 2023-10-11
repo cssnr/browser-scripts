@@ -15,16 +15,32 @@
 window.addEventListener(
     'load',
     function () {
-        console.log('Updating table now...')
-        const rows = document.getElementsByClassName('hp')[0].children[0].rows
+        const rows = document.getElementsByTagName('table')[0].children[0].rows
+        let i = 4
         for (const tr of rows) {
-            if (tr.cells[4].firstChild) {
-                if (
-                    tr.cells[4].firstChild.data !== '0' &&
-                    tr.firstElementChild.tagName !== 'TH'
-                ) {
-                    tr.style.backgroundColor = '#3d0000'
-                }
+            // if (tr.cells[0].tagName === 'TH') {
+            //     for (const td of tr.cells) {
+            //         if (td.textContent === 'fat.') {
+            //             console.log(`fat. index: ${td.cellIndex}`)
+            //             i = td.cellIndex
+            //             break
+            //         }
+            //     }
+            //     continue
+            // }
+            // if (!i) {
+            //     break
+            // }
+            if (tr.cells[0].tagName === 'TH') {
+                continue
+            }
+            console.log('Updating table now...')
+            if (
+                tr.cells[i] &&
+                tr.cells[i].firstChild &&
+                tr.cells[i].firstChild.data !== '0'
+            ) {
+                tr.style.backgroundColor = '#3d0000'
             }
         }
     },
