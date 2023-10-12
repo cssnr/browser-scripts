@@ -52,12 +52,21 @@ function updateEntryTable() {
                 tr.cells[1].innerHTML = `<span>${reg}</span>`
                 if (reg.startsWith('N')) {
                     const faaUrl = `<a href='https://registry.faa.gov/AircraftInquiry/Search/NNumberResult?nNumberTxt=${reg}' target='_blank'>FAA</a>`
-                    tr.cells[1].innerHTML += `| ${faaUrl}`
+                    tr.cells[1].innerHTML += ` | ${faaUrl}`
                 }
                 const flightAware = `<a href='https://flightaware.com/resources/registration/${reg}' target='_blank'>FA</a>`
                 const fr24 = `<a href='https://flightaware.com/resources/registration/${reg}' target='_blank'>FR24</a>`
                 const jetPhotos = `<a href='https://www.jetphotos.com/registration/${reg}' target='_blank'>JetPhotos</a>`
                 tr.cells[1].innerHTML += ` | ${flightAware} | ${fr24} | ${jetPhotos}`
+            }
+        }
+        if (tr.innerHTML.includes('Owner/operator:')) {
+            let oper = tr.cells[1].textContent.trim()
+            if (oper && oper !== 'Private') {
+                console.log(`oper: ${oper}`)
+                oper = oper.replace(' ', '+')
+                const operSearch = `<a href='https://aviation-safety.net/wikibase/dblist2.php?op=${oper}' target='_blank'>Wiki Search</a>`
+                tr.cells[1].innerHTML += ` | ${operSearch}`
             }
         }
     }
@@ -74,6 +83,7 @@ function updateLastUpdated() {
     el.innerHTML = `<a href='https://aviation-safety.net/wikibase/web_db_edit.php?id=${id}'>Edit ${id}</a>`
     el.style.float = 'none'
     el.style.marginLeft = '40px'
+    // el.style.color = 'white'
     // Add Updated Date
     const rows = document.getElementsByClassName('updates')[0].children[0].rows
     const updated = rows[rows.length - 1].firstChild.innerText.trim()
