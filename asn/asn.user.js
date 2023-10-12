@@ -47,21 +47,18 @@ function updateEntryTable() {
     for (const tr of rows) {
         if (tr.innerHTML.includes('Registration:')) {
             const reg = tr.cells[1].textContent.trim()
-            console.log(`reg: ${reg}`)
-            tr.cells[1].innerHTML = `<span>${reg}</span>`
-            if (reg.startsWith('N')) {
-                const faaUrl = `<a href='https://registry.faa.gov/AircraftInquiry/Search/NNumberResult?nNumberTxt=${reg}' target='_blank'>FAA</a>`
-                tr.cells[1].innerHTML += `| ${faaUrl}`
+            if (reg) {
+                console.log(`reg: ${reg}`)
+                tr.cells[1].innerHTML = `<span>${reg}</span>`
+                if (reg.startsWith('N')) {
+                    const faaUrl = `<a href='https://registry.faa.gov/AircraftInquiry/Search/NNumberResult?nNumberTxt=${reg}' target='_blank'>FAA</a>`
+                    tr.cells[1].innerHTML += `| ${faaUrl}`
+                }
+                const flightAware = `<a href='https://flightaware.com/resources/registration/${reg}' target='_blank'>FA</a>`
+                const fr24 = `<a href='https://flightaware.com/resources/registration/${reg}' target='_blank'>FR24</a>`
+                const jetPhotos = `<a href='https://www.jetphotos.com/registration/${reg}' target='_blank'>JetPhotos</a>`
+                tr.cells[1].innerHTML += ` | ${flightAware} | ${fr24} | ${jetPhotos}`
             }
-            const flightAware = `<a href='https://flightaware.com/resources/registration/${reg}' target='_blank'>FA</a>`
-            const fr24 = `<a href='https://flightaware.com/resources/registration/${reg}' target='_blank'>FR24</a>`
-            const jetPhotos = `<a href='https://www.jetphotos.com/registration/${reg}' target='_blank'>JetPhotos</a>`
-            tr.cells[1].innerHTML += ` | ${flightAware} | ${fr24} | ${jetPhotos}`
-            // const split = tr.innerHTML.split('\t')
-            // const reg = split[1]
-            // console.log(`reg: ${reg}`)
-            // const faaUrl = ` <a href="https://registry.faa.gov/AircraftInquiry/Search/NNumberResult?nNumberTxt=${reg}" target="_blank">FAA</a>`
-            // tr.innerHTML = tr.innerHTML + faaUrl
         }
     }
 }
@@ -80,8 +77,9 @@ function updateLastUpdated() {
     // Add Updated Date
     const rows = document.getElementsByClassName('updates')[0].children[0].rows
     const updated = rows[rows.length - 1].firstChild.innerText.trim()
+    const times = rows.length - 1
     console.log(`updated: ${updated}`)
-    el.innerHTML += ` - Updated: ${updated}`
+    el.innerHTML += ` - Updated <strong>${times}</strong> times on <strong>${updated}</strong>`
 }
 
 // Wait for load
