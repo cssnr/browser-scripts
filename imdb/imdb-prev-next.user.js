@@ -4,7 +4,7 @@
 // @version        20231001
 // @author         shane
 // @icon           https://imdb.com/favicon.ico
-// @namespace      https://github.com/cssnr/browser-scripts/imdb-prev-next.user.js
+// @namespace      https://github.com/cssnr/browser-scripts/blob/master/imdb/imdb-prev-next.user.js
 // @match          *://*.imdb.com/title/*
 // @noframes
 // ==/UserScript==

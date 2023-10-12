@@ -4,7 +4,7 @@
 // @version        20231001
 // @author         shane
 // @icon           https://aviation-safety.net/favicon.ico
-// @namespace      https://github.com/cssnr/browser-scripts/asn.user.js
+// @namespace      https://github.com/cssnr/browser-scripts/blob/master/asn/asn.user.js
 // @match          *://aviation-safety.net/*
 // @noframes
 // ==/UserScript==
