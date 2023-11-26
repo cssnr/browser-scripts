@@ -62,7 +62,10 @@ function updateEntryTable() {
         }
         if (tr.innerHTML.includes('Owner/operator:')) {
             let oper = tr.cells[1].textContent.trim()
-            if (oper && oper !== 'Private') {
+            if (
+                oper &&
+                !['private', 'unreported'].includes(oper.trim().toLowerCase())
+            ) {
                 console.log(`oper: ${oper}`)
                 oper = oper.replace(' ', '+')
                 const operSearch = `<a href='https://aviation-safety.net/wikibase/dblist2.php?op=${oper}' target='_blank'>Wiki Search</a>`
