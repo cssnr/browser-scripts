@@ -21,19 +21,20 @@ window.addEventListener('load', () => {
         // console.log(`${name}: ${value}`)
         if (name === 'unauthenicatedArticleLimitReached') {
             if (value === 'true') {
-                document.cookie = 'unauthenicatedArticleLimitReached=false'
+                document.cookie =
+                    'unauthenicatedArticleLimitReached=false; path=/'
                 console.log('Reset Article Limit')
             }
         } else if (name === 'articlesRead') {
             const decodedString = decodeURIComponent(value)
             const decodedObject = JSON.parse(decodedString)
-            console.log('articlesRead:', decodedObject)
-            // decodedObject.visited_links = []
-            const jsonString = JSON.stringify(decodedObject)
-            const encodedString = encodeURIComponent(jsonString)
-            console.log('encodedString:', encodedString)
-            document.cookie = `articlesRead=${encodedString}`
-            console.log('Reset Visited Links')
+            if (decodedObject?.visited_links?.length) {
+                decodedObject.visited_links = []
+                const jsonString = JSON.stringify(decodedObject)
+                const encodedString = encodeURIComponent(jsonString)
+                document.cookie = `articlesRead=${encodedString}; path=/`
+                console.log('Clearing Visited Links')
+            }
         }
     }
 })
