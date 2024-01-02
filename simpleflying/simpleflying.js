@@ -1,20 +1,18 @@
 // ==UserScript==
 // @name           SimpleFlying Extras
 // @description    Automatically delete unauthenicatedArticleLimitReached cookie.
-// @version        20231101
+// @version        20231201
 // @author         shane
 // @icon           https://simpleflying.com/public/build/images/favicon-48x48.8d7facc6.png
-// @namespace      https://github.com/cssnr/browser-scripts/simpleflying-extras.js
+// @namespace      https://github.com/cssnr/browser-scripts/
 // @match          *://*.simpleflying.com/*
 // @noframes
 // ==/UserScript==
 
-'use strict'
-
 window.addEventListener('load', () => {
     // console.log('document.cookie:', document.cookie)
     let cookies = document.cookie.split(';').map((item) => item.trim())
-    console.log('cookies:', cookies)
+    console.debug('cookies:', cookies)
     for (const cookie of cookies) {
         // console.log('cookie:', cookie)
         let [name, value] = cookie.split(/=(.*)/s)
