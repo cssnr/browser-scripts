@@ -11,7 +11,6 @@
 
 window.addEventListener('load', () => {
     let showMore = document.querySelector('.ipc-see-more__button')
-    console.debug('showMore:', showMore)
-    console.info('Activating See all now...')
+    console.info('Activating See all...')
     showMore?.click()
 })

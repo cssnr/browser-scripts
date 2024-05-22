@@ -19,10 +19,13 @@ const nextEl = document.querySelector(
 // Listen for keydown events
 window.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowLeft') {
-        console.info('Activating Next all now...')
+        // console.info('Activating Next...')
         prevEl?.click()
     } else if (event.key === 'ArrowRight') {
-        console.info('Activating Previous all now...')
+        // console.info('Activating Previous...')
         nextEl?.click()
+    } else if (event.code === 'KeyE') {
+        // console.info('Activating Episodes...')
+        document.querySelector('.episode-guide-text')?.click()
     }
 })
