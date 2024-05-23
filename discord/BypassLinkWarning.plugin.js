@@ -2,7 +2,10 @@
  * @name BypassLinkWarning
  * @version 1.0.1
  * @description Automatically Click Visit Site on the Leaving Discord screen.
+ * @source https://github.com/cssnr/browser-scripts
+ * @updateUrl https://raw.githubusercontent.com/cssnr/browser-scripts/master/discord/BypassLinkWarning.plugin.js
  * @author Shane
+ * @authorLink https://cssnr.github.io/
  */
 
 module.exports = class BypassLinkWarning {
