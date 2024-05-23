@@ -1,6 +1,6 @@
 /**
  * @name BypassLinkWarning
- * @version 1.0.1
+ * @version 1.0.2
  * @description Automatically Click Visit Site on the Leaving Discord screen.
  * @source https://github.com/cssnr/browser-scripts
  * @updateUrl https://raw.githubusercontent.com/cssnr/browser-scripts/master/discord/BypassLinkWarning.plugin.js
@@ -19,7 +19,7 @@ module.exports = class BypassLinkWarning {
                 if (mutation.addedNodes.length) {
                     mutation.addedNodes.forEach((node) => {
                         if (node.nodeType === 1) {
-                            processNode(node)
+                            this.processNode(node)
                         }
                     })
                 }
@@ -39,17 +39,17 @@ module.exports = class BypassLinkWarning {
 
         this.observer.observe(targetNode, config)
     }
-}
 
-function processNode(node) {
-    const button = node.querySelector('button[type="button"]')
-    if (button?.textContent?.includes('Visit Site')) {
-        button.click()
-        const bg = document.querySelector('[class^="backdrop"]')
-        if (bg) {
-            setTimeout(() => {
-                bg.click()
-            }, 50)
+    processNode(node) {
+        const button = node.querySelector('button[type="button"]')
+        if (button?.textContent?.includes('Visit Site')) {
+            button.click()
+            const bg = document.querySelector('[class^="backdrop"]')
+            if (bg) {
+                setTimeout(() => {
+                    bg.click()
+                }, 50)
+            }
         }
     }
 }
