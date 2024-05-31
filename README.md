@@ -16,13 +16,12 @@ Random Browser Scripts and Styles for Random Sites that do Random Things.
 
 User Scripts (js) require a browser addon to manage such as Tampermonkey or Greasemonkey.
 
-- [Tampermonkey](https://www.tampermonkey.net/) (All)
-- [Greasemonkey](https://www.greasespot.net/) (Firefox Only)
+- [Violentmonkey](https://violentmonkey.github.io/)
 
 
 User Styles (css) require a browser addon to manage such as Stylus.
 
-- [Stylus](https://add0n.com/stylus.html) (All)
+- [Stylus](https://add0n.com/stylus.html)
 
 
 ## User Scripts
