@@ -38,8 +38,17 @@ module.exports = class BypassLinkWarning {
     }
 
     processNode(node) {
-        const button = node.querySelector('button[type="button"]')
-        if (button?.textContent?.includes('Visit Site')) {
+        // console.log('node:', node)
+        let button
+        if (node.textContent.startsWith('Potential Dangerous Download')) {
+            button = node.querySelectorAll('button')[1]
+        } else {
+            button = node.querySelector('button[type="button"]')
+        }
+        if (
+            button?.textContent?.includes('Visit Site') ||
+            button?.textContent?.includes('Continue to download')
+        ) {
             button.click()
             const bg = document.querySelector('[class^="backdrop"]')
             if (bg) {
