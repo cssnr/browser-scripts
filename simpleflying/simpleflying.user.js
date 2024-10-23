@@ -3,8 +3,10 @@
 // @description    Automatically delete unauthenicatedArticleLimitReached cookie.
 // @version        20231201
 // @author         shane
+// @namespace      https://github.com/cssnr/browser-scripts
+// @updateURL      https://github.com/cssnr/browser-scripts/raw/master/simpleflying/simpleflying.user.js
+// @downloadURL    https://github.com/cssnr/browser-scripts/raw/master/simpleflying/simpleflying.user.js
 // @icon           https://simpleflying.com/public/build/images/favicon-48x48.8d7facc6.png
-// @namespace      https://github.com/cssnr/browser-scripts/
 // @match          *://*.simpleflying.com/*
 // @noframes
 // ==/UserScript==

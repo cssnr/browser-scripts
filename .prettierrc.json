@@ -1,14 +1,19 @@
 {
-    "trailingComma": "es5",
-    "tabWidth": 4,
-    "semi": false,
-    "singleQuote": true,
-    "overrides": [
-        {
-            "files": ["**/*.html"],
-            "options": {
-                "singleQuote": false
-            }
-        }
-    ]
+  "trailingComma": "es5",
+  "semi": false,
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": ["**/*.html", "**/*.yaml", "**/*.yml"],
+      "options": {
+        "singleQuote": false
+      }
+    },
+    {
+      "files": ["**/*.js"],
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ]
 }

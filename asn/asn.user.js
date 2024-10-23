@@ -3,9 +3,11 @@
 // @description    ASN Plus Modifications
 // @version        20231201
 // @author         shane
-// @icon           https://aviation-safety.net/favicon.ico
-// @namespace      https://github.com/cssnr/browser-scripts/
-// @match          *://aviation-safety.net/*
+// @namespace      https://github.com/cssnr/browser-scripts
+// @updateURL      https://github.com/cssnr/browser-scripts/raw/master/asn/asn.user.js
+// @downloadURL    https://github.com/cssnr/browser-scripts/raw/master/asn/asn.user.js
+// @icon           https://asn.flightsafety.org/favicon.ico
+// @match          *://asn.flightsafety.org/*
 // @noframes
 // ==/UserScript==
 

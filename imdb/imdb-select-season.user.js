@@ -3,8 +3,10 @@
 // @description    Navigate episode seasons with number keys.
 // @version        20240521
 // @author         shane
-// @icon           https://imdb.com/favicon.ico
 // @namespace      https://github.com/cssnr/browser-scripts
+// @updateURL      https://github.com/cssnr/browser-scripts/raw/master/imdb/imdb-select-season.user.js
+// @downloadURL    https://github.com/cssnr/browser-scripts/raw/master/imdb/imdb-select-season.user.js
+// @icon           https://imdb.com/favicon.ico
 // @match          *://*.imdb.com/title/*/episodes/*
 // @noframes
 // ==/UserScript==

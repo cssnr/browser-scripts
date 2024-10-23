@@ -3,8 +3,10 @@
 // @description    Navigate episode previous and next with arrow keys.
 // @version        20240521
 // @author         shane
+// @namespace      https://github.com/cssnr/browser-scripts
+// @updateURL      https://github.com/cssnr/browser-scripts/raw/master/imdb/imdb-prev-next.user.js
+// @downloadURL    https://github.com/cssnr/browser-scripts/raw/master/imdb/imdb-prev-next.user.js
 // @icon           https://imdb.com/favicon.ico
-// @namespace      https://github.com/cssnr/browser-scripts/
 // @match          *://*.imdb.com/title/*
 // @noframes
 // ==/UserScript==

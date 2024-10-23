@@ -3,8 +3,10 @@
 // @description Update FAA Registration Results Page
 // @version     20240522
 // @author      shane
+// @namespace   https://github.com/cssnr/browser-scripts
+// @updateURL   https://github.com/cssnr/browser-scripts/raw/master/faa/faa.user.js
+// @downloadURL https://github.com/cssnr/browser-scripts/raw/master/faa/faa.user.js
 // @icon        https://registry.faa.gov/AircraftInquiry/images/favicon.ico
-// @namespace   https://github.com/cssnr/browser-scripts/
 // @match       https://registry.faa.gov/AircraftInquiry/Search/NNumberResult*
 // ==/UserScript==
 
