@@ -1,6 +1,6 @@
 /**
  * @name BypassLinkWarning
- * @version 1.0.3
+ * @version 1.0.4
  * @description Automatically Click Visit Site on the Leaving Discord screen.
  * @source https://github.com/cssnr/browser-scripts
  * @updateUrl https://raw.githubusercontent.com/cssnr/browser-scripts/master/discord/BypassLinkWarning.plugin.js
@@ -38,13 +38,23 @@ module.exports = class BypassLinkWarning {
     }
 
     processNode(node) {
-        // console.log('node:', node)
+        //console.log('node:', node)
         let button
         if (node.textContent.startsWith('Potential Dangerous Download')) {
             button = node.querySelectorAll('button')[1]
-        } else {
-            button = node.querySelector('button[type="button"]')
+            console.log('Potential Dangerous Download button:', button)
+        } else if (node.textContent === 'Leaving Discord') {
+            const parent = node.parentElement.parentElement
+            const buttons = parent.querySelectorAll('button')
+            for (const btn of buttons) {
+                if (btn.textContent === 'Visit Site') {
+                    button = btn
+                }
+            }
+            console.log('Leaving Discord button:', button)
         }
+        if (!button) return
+        console.log('button:', button?.textContent)
         if (
             button?.textContent?.includes('Visit Site') ||
             button?.textContent?.includes('Continue to download')
