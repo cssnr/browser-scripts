@@ -1,11 +1,15 @@
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/cssnr/browser-scripts?logo=github&logoColor=white&label=updated)](https://github.com/cssnr/browser-scripts/graphs/commit-activity)
-[![GitHub Top Language](https://img.shields.io/github/languages/top/cssnr/browser-scripts?logo=htmx&logoColor=white)](https://github.com/cssnr/browser-scripts)
-[![GitHub Org Stars](https://img.shields.io/github/stars/cssnr?style=flat&logo=github&logoColor=white&label=org%20stars)](https://cssnr.github.io/)
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/cssnr/browser-scripts?logo=github&label=updated)](https://github.com/cssnr/browser-scripts/pulse)
+[![GitHub Contributors](https://img.shields.io/github/contributors-anon/cssnr/browser-scripts?logo=github)](https://github.com/cssnr/browser-scripts/graphs/contributors)
+[![GitHub Repo Size](https://img.shields.io/github/repo-size/cssnr/browser-scripts?logo=bookstack&logoColor=white&label=repo%20size)](https://github.com/cssnr/browser-scripts?tab=readme-ov-file#readme)
+[![GitHub Top Language](https://img.shields.io/github/languages/top/cssnr/browser-scripts?logo=htmx)](https://github.com/cssnr/browser-scripts/tree/master/src)
+[![GitHub Discussions](https://img.shields.io/github/discussions/cssnr/browser-scripts?logo=github)](https://github.com/cssnr/browser-scripts/discussions)
+[![GitHub Forks](https://img.shields.io/github/forks/cssnr/browser-scripts?style=flat&logo=github)](https://github.com/cssnr/browser-scripts/forks)
+[![GitHub Repo Stars](https://img.shields.io/github/stars/cssnr/browser-scripts?style=flat&logo=github)](https://github.com/cssnr/browser-scripts/stargazers)
+[![GitHub Org Stars](https://img.shields.io/github/stars/cssnr?style=flat&logo=github&label=org%20stars)](https://cssnr.github.io/)
 [![Discord](https://img.shields.io/discord/899171661457293343?logo=discord&logoColor=white&label=discord&color=7289da)](https://discord.gg/wXy6m2X8wY)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-72a5f2?logo=kofi&label=support)](https://ko-fi.com/cssnr)
 
 # Browser Scripts
-
-## Table of Contents
 
 - [Overview](#overview)
 - [Requirements](#requirements)
@@ -45,12 +49,12 @@ User Styles (css) require a browser addon to manage such as Stylus.
 
 ## Discord Plugins
 
-| Name                                                                                                                      | Description                                  |
-| ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| [Bypass Link Warning](https://raw.githubusercontent.com/cssnr/browser-scripts/master/discord/BypassLinkWarning.plugin.js) | Bypass Discord Leaving Site Warning on Links |
+| Name                                                                                                                      | Description                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| [Bypass Link Warning](https://raw.githubusercontent.com/cssnr/browser-scripts/master/discord/BypassLinkWarning.plugin.js) | MOVED TO: [smashedr/bypass-links-dialog](https://github.com/smashedr/bypass-links-dialog) |
 
-> [!IMPORTANT]  
-> These are not user scripts, they are Discord scripts and require [Better Discord](https://betterdiscord.app/).
+> [!WARNING]  
+> This has moved here: https://github.com/smashedr/bypass-links-dialog
 
 ---
 

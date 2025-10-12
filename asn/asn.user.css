@@ -10,30 +10,53 @@
     body {
         background: #848484;
     }
-    td.list, th.list,  th.defaultheader, th.updates, td.listmain, td.listmain_nohover, .infobox_highlight, td.listdata {
+    td.list,
+    th.list,
+    th.defaultheader,
+    th.updates,
+    td.listmain,
+    td.listmain_nohover,
+    .infobox_highlight,
+    td.listdata {
         color: white;
-        border-top: 1px solid #FFF;
-        border-bottom: 1px solid #FFF;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
     }
-    body, div.pagenumbers a, .navigation a:link, label, td.listnoline {
+    body,
+    div.pagenumbers a,
+    .navigation a:link,
+    label,
+    td.listnoline {
         color: white;
     }
     .infobox {
         background-color: #222;
     }
-    table, #page-wrap, .navigation, .navigation ul li, table tr.listmain td {
+    table,
+    #page-wrap,
+    .navigation,
+    .navigation ul li,
+    table tr.listmain td {
         background-color: #313131;
     }
-    table tr.list:hover td, table tr:hover td.list, td.listdata:hover, tbody tr:hover td.listdata {
-        background-color:#474747
+    table tr.list:hover td,
+    table tr:hover td.list,
+    td.listdata:hover,
+    tbody tr:hover td.listdata {
+        background-color: #474747;
     }
     a {
         color: #0f0;
     }
-    a:visited, .trail a:link, .trail a:visited, div.alertbox a {
+    a:visited,
+    .trail a:link,
+    .trail a:visited,
+    div.alertbox a {
         color: #f0f;
     }
-    div.navigation img, div.alertbox, div#noprint {
+    div.navigation img,
+    div.alertbox,
+    div#noprint {
         display: none;
     }
     /*

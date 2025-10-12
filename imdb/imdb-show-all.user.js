@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           IMDb Auto Show All
 // @description    Automatically show all titles for actors.
-// @version        20240521
+// @version        20250112
 // @author         shane
 // @namespace      https://github.com/cssnr/browser-scripts
 // @updateURL      https://github.com/cssnr/browser-scripts/raw/master/imdb/imdb-show-all.user.js
@@ -12,7 +12,19 @@
 // ==/UserScript==
 
 window.addEventListener('load', () => {
-    let showMore = document.querySelector('.ipc-see-more__button')
-    console.info('Activating See all...')
-    showMore?.click()
+    const showMore = document.querySelector('.ipc-see-more__button')
+    if (!showMore) return
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            if (entries[0].isIntersecting) {
+                observer.disconnect()
+                console.info('Clicking See all...')
+                showMore.click()
+            }
+        },
+        { threshold: 1.0 }
+    )
+
+    observer.observe(showMore)
 })

@@ -11,9 +11,7 @@
 // ==/UserScript==
 
 window.addEventListener('load', () => {
-    let element = document.querySelector(
-        '[data-label="Mode S Code (Base 16 / Hex)"]'
-    )
+    let element = document.querySelector('[data-label="Mode S Code (Base 16 / Hex)"]')
     if (element) {
         const hex = element.textContent
         const link = document.createElement('a')
