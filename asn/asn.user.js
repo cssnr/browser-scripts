@@ -13,10 +13,7 @@
 
 window.addEventListener('load', () => {
     highlightTableRows()
-    if (
-        document.URL.includes('/wikibase/') ||
-        document.URL.includes('/database/')
-    ) {
+    if (document.URL.includes('/wikibase/') || document.URL.includes('/database/')) {
         updateEntryTable()
         updateLastUpdated()
     }

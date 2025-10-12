@@ -21,8 +21,7 @@ window.addEventListener('load', () => {
         // console.log(`${name}: ${value}`)
         if (name === 'unauthenicatedArticleLimitReached') {
             if (value === 'true') {
-                document.cookie =
-                    'unauthenicatedArticleLimitReached=false; path=/'
+                document.cookie = 'unauthenicatedArticleLimitReached=false; path=/'
                 console.log('Reset Article Limit')
             }
         } else if (name === 'articlesRead') {
